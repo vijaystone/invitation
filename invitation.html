@@ -1,0 +1,1829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Anushka & Prabhas | Wedding Invitation</title>
+
+  <!-- =========================================================
+       GOOGLE FONTS
+  ========================================================== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+
+  <style>
+    /* =========================================================
+       1. GLOBAL STYLES
+    ========================================================== */
+
+    :root {
+      --ivory: #fffaf0;
+      --cream: #f8ecd8;
+      --gold: #c89b4b;
+      --gold-light: #e5c982;
+      --gold-dark: #9a6b29;
+      --pink: #ead0c7;
+      --maroon: #641f2b;
+      --brown: #624735;
+      --white: #ffffff;
+      --shadow: rgba(75, 45, 25, 0.18);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--ivory);
+      color: var(--brown);
+      font-family: "Montserrat", sans-serif;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font-family: inherit;
+    }
+
+    /* =========================================================
+       2. NAVIGATION
+    ========================================================== */
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+
+      padding: 18px 6%;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      background: rgba(255, 250, 240, 0.88);
+      backdrop-filter: blur(14px);
+
+      border-bottom: 1px solid rgba(200, 155, 75, 0.25);
+
+      transition: 0.4s ease;
+    }
+
+    .logo {
+      font-family: "Great Vibes", cursive;
+      color: var(--gold-dark);
+      font-size: 32px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 35px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      position: relative;
+
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+
+      color: var(--brown);
+
+      transition: 0.3s;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+
+      left: 0;
+      bottom: -8px;
+
+      width: 0;
+      height: 1px;
+
+      background: var(--gold);
+
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--gold-dark);
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
+      width: 100%;
+    }
+
+    .menu-btn {
+      display: none;
+
+      border: none;
+      background: none;
+
+      color: var(--gold-dark);
+      font-size: 28px;
+
+      cursor: pointer;
+    }
+
+    /* =========================================================
+       3. COMMON SECTION
+    ========================================================== */
+
+    section {
+      position: relative;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    .section-inner {
+      position: relative;
+      z-index: 5;
+
+      width: min(1150px, 90%);
+      margin: auto;
+    }
+
+    .eyebrow {
+      font-size: 11px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      margin-bottom: 15px;
+    }
+
+    .section-title {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(50px, 7vw, 90px);
+      font-weight: 500;
+      color: var(--maroon);
+      line-height: 0.95;
+    }
+
+    .script {
+      font-family: "Great Vibes", cursive;
+      color: var(--gold-dark);
+    }
+
+    .ornament {
+      color: var(--gold);
+      font-size: 26px;
+      letter-spacing: 8px;
+      margin: 20px 0;
+    }
+
+    /* =========================================================
+       4. DECORATIVE BACKGROUND
+    ========================================================== */
+
+    .gold-particles {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .particle {
+      position: absolute;
+
+      width: 4px;
+      height: 4px;
+
+      background: var(--gold-light);
+      border-radius: 50%;
+
+      opacity: 0.55;
+
+      animation: floatParticle 8s infinite ease-in-out;
+    }
+
+    .particle:nth-child(1) {
+      left: 10%;
+      top: 20%;
+      animation-delay: 0s;
+    }
+
+    .particle:nth-child(2) {
+      left: 30%;
+      top: 70%;
+      animation-delay: 2s;
+    }
+
+    .particle:nth-child(3) {
+      left: 70%;
+      top: 25%;
+      animation-delay: 1s;
+    }
+
+    .particle:nth-child(4) {
+      left: 85%;
+      top: 65%;
+      animation-delay: 3s;
+    }
+
+    .particle:nth-child(5) {
+      left: 50%;
+      top: 50%;
+      animation-delay: 4s;
+    }
+
+    @keyframes floatParticle {
+      0%, 100% {
+        transform: translateY(0) scale(1);
+      }
+
+      50% {
+        transform: translateY(-50px) scale(1.5);
+      }
+    }
+
+    .flower {
+      position: absolute;
+
+      font-size: 70px;
+      color: rgba(200, 155, 75, 0.28);
+
+      z-index: 2;
+
+      animation: flowerFloat 7s ease-in-out infinite;
+      pointer-events: none;
+    }
+
+    .flower.one {
+      top: 15%;
+      left: 2%;
+    }
+
+    .flower.two {
+      bottom: 10%;
+      right: 3%;
+      animation-delay: 2s;
+    }
+
+    .flower.three {
+      top: 45%;
+      right: 7%;
+      font-size: 45px;
+      animation-delay: 4s;
+    }
+
+    @keyframes flowerFloat {
+      0%, 100% {
+        transform: translateY(0) rotate(0);
+      }
+
+      50% {
+        transform: translateY(-20px) rotate(8deg);
+      }
+    }
+
+    /* =========================================================
+       5. PAGE 1 — HERO
+    ========================================================== */
+
+    #home {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      min-height: 100vh;
+
+      padding: 120px 0 70px;
+
+      background:
+        radial-gradient(
+          circle at 50% 40%,
+          rgba(255,255,255,0.95),
+          rgba(248,236,216,0.8) 50%,
+          rgba(234,208,199,0.45)
+        );
+    }
+
+    .hero-content {
+      text-align: center;
+      width: 100%;
+    }
+
+    .hero-intro {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 25px;
+      font-style: italic;
+      color: var(--brown);
+      margin-bottom: 15px;
+    }
+
+    .hero-names {
+      font-family: "Great Vibes", cursive;
+      color: var(--maroon);
+      font-size: clamp(60px, 10vw, 125px);
+      line-height: 0.9;
+      font-weight: 400;
+    }
+
+    .hero-amp {
+      font-family: "Cormorant Garamond", serif;
+      display: block;
+      font-size: 42px;
+      color: var(--gold-dark);
+      margin: 14px 0;
+    }
+
+    .getting-married {
+      margin-top: 25px;
+
+      font-size: 12px;
+      letter-spacing: 7px;
+      text-transform: uppercase;
+
+      color: var(--gold-dark);
+    }
+
+    /* Couple photos */
+
+    .hero-couple {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      gap: 35px;
+
+      margin: 40px auto;
+
+      max-width: 800px;
+    }
+
+    .hero-photo {
+      position: relative;
+
+      width: 260px;
+      height: 330px;
+
+      padding: 8px;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--gold-dark),
+          #f7df9c,
+          var(--gold)
+        );
+
+      box-shadow: 0 25px 60px var(--shadow);
+
+      transition: transform 0.5s ease;
+    }
+
+    .hero-photo:first-child {
+      transform: rotate(-3deg);
+    }
+
+    .hero-photo:last-child {
+      transform: rotate(3deg);
+    }
+
+    .hero-photo:hover {
+      transform: rotate(0) translateY(-10px);
+    }
+
+    .hero-photo img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      display: block;
+
+      border: 4px solid var(--ivory);
+    }
+
+    .hero-date {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+
+      color: var(--maroon);
+
+      margin: 25px 0;
+    }
+
+    .hero-date strong {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 30px;
+      font-weight: 600;
+    }
+
+    .hero-date span {
+      width: 5px;
+      height: 5px;
+
+      background: var(--gold);
+      border-radius: 50%;
+    }
+
+    .venue-small {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 22px;
+      color: var(--brown);
+    }
+
+    /* Buttons */
+
+    .gold-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      margin-top: 28px;
+      padding: 16px 35px;
+
+      border: 1px solid var(--gold);
+      border-radius: 50px;
+
+      background: linear-gradient(
+        135deg,
+        #b98635,
+        #dfbd6c
+      );
+
+      color: white;
+
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+
+      cursor: pointer;
+
+      box-shadow: 0 10px 30px rgba(167, 119, 43, 0.25);
+
+      transition: 0.35s ease;
+    }
+
+    .gold-btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 15px 35px rgba(167, 119, 43, 0.4);
+    }
+
+    .scroll-hint {
+      margin-top: 25px;
+
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+
+      color: #967657;
+
+      animation: scrollHint 2s infinite;
+    }
+
+    @keyframes scrollHint {
+      50% {
+        transform: translateY(8px);
+      }
+    }
+
+    /* =========================================================
+       6. PAGE 2 — OUR STORY
+    ========================================================== */
+
+    #story {
+      padding: 150px 0;
+
+      background:
+        linear-gradient(
+          135deg,
+          #fffaf0,
+          #f6e6d0
+        );
+    }
+
+    .story-header {
+      text-align: center;
+      margin-bottom: 90px;
+    }
+
+    .story-subtitle {
+      font-family: "Cormorant Garamond", serif;
+
+      font-size: 28px;
+      font-style: italic;
+
+      margin-top: 18px;
+
+      color: #86654a;
+    }
+
+    .timeline {
+      position: relative;
+
+      max-width: 950px;
+      margin: auto;
+    }
+
+    .timeline::before {
+      content: "";
+
+      position: absolute;
+
+      left: 50%;
+      top: 0;
+      bottom: 0;
+
+      width: 1px;
+
+      background:
+        linear-gradient(
+          to bottom,
+          transparent,
+          var(--gold),
+          transparent
+        );
+    }
+
+    .story-item {
+      position: relative;
+
+      width: 50%;
+
+      padding: 35px 60px;
+
+      opacity: 0;
+      transform: translateY(50px);
+
+      transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+    }
+
+    .story-item.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .story-item:nth-child(odd) {
+      text-align: right;
+      padding-left: 0;
+    }
+
+    .story-item:nth-child(even) {
+      margin-left: 50%;
+      padding-right: 0;
+    }
+
+    .timeline-dot {
+      position: absolute;
+
+      top: 45px;
+
+      width: 13px;
+      height: 13px;
+
+      border: 3px solid var(--ivory);
+      background: var(--gold);
+
+      border-radius: 50%;
+
+      box-shadow: 0 0 0 1px var(--gold);
+    }
+
+    .story-item:nth-child(odd) .timeline-dot {
+      right: -7px;
+    }
+
+    .story-item:nth-child(even) .timeline-dot {
+      left: -6px;
+    }
+
+    .story-item h3 {
+      font-family: "Cormorant Garamond", serif;
+
+      font-size: 42px;
+      font-weight: 500;
+
+      color: var(--maroon);
+
+      margin-bottom: 15px;
+    }
+
+    .story-item p {
+      line-height: 1.9;
+      font-size: 14px;
+      color: #735a45;
+    }
+
+    /* Story image */
+
+    .story-image {
+      max-width: 850px;
+      height: 430px;
+
+      margin: 80px auto 70px;
+
+      padding: 10px;
+
+      background: linear-gradient(
+        135deg,
+        var(--gold-dark),
+        #f3d68f,
+        var(--gold)
+      );
+
+      box-shadow: 0 30px 60px var(--shadow);
+
+      opacity: 0;
+      transform: scale(0.95);
+
+      transition: 1s ease;
+    }
+
+    .story-image.visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .story-image img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      display: block;
+
+      border: 4px solid var(--ivory);
+    }
+
+    .continue {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    /* =========================================================
+       7. PAGE 3 — WEDDING
+    ========================================================== */
+
+    #wedding {
+      padding: 150px 0 80px;
+
+      background:
+        radial-gradient(
+          circle at 50% 20%,
+          #fffdf7,
+          #f3dfc7
+        );
+    }
+
+    .wedding-header {
+      text-align: center;
+      margin-bottom: 70px;
+    }
+
+    .details-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 25px;
+
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .detail-card {
+      padding: 45px 25px;
+
+      text-align: center;
+
+      background: rgba(255,255,255,0.55);
+
+      border: 1px solid rgba(200,155,75,0.55);
+
+      box-shadow:
+        0 20px 50px rgba(100,60,30,0.08);
+
+      backdrop-filter: blur(8px);
+
+      transition: 0.4s ease;
+    }
+
+    .detail-card:hover {
+      transform: translateY(-10px);
+
+      box-shadow:
+        0 25px 60px rgba(100,60,30,0.16);
+    }
+
+    .detail-icon {
+      color: var(--gold-dark);
+      font-size: 30px;
+      margin-bottom: 18px;
+    }
+
+    .detail-card h3 {
+      font-size: 10px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+
+      color: var(--gold-dark);
+
+      margin-bottom: 15px;
+    }
+
+    .detail-card p {
+      font-family: "Cormorant Garamond", serif;
+
+      font-size: 29px;
+
+      color: var(--maroon);
+    }
+
+    /* Invitation message */
+
+    .invitation-message {
+      max-width: 800px;
+
+      margin: 90px auto;
+
+      text-align: center;
+
+      padding: 60px 30px;
+
+      border-top: 1px solid var(--gold);
+      border-bottom: 1px solid var(--gold);
+    }
+
+    .invitation-message p {
+      font-family: "Cormorant Garamond", serif;
+
+      font-size: clamp(30px, 4vw, 48px);
+
+      font-style: italic;
+
+      line-height: 1.3;
+
+      color: var(--maroon);
+    }
+
+    /* Countdown */
+
+    .countdown {
+      display: grid;
+
+      grid-template-columns:
+        repeat(4, 1fr);
+
+      gap: 15px;
+
+      max-width: 700px;
+
+      margin: 50px auto;
+    }
+
+    .count-box {
+      padding: 25px 10px;
+
+      background: rgba(255,255,255,0.65);
+
+      border: 1px solid rgba(200,155,75,0.45);
+
+      text-align: center;
+    }
+
+    .count-number {
+      font-family: "Cormorant Garamond", serif;
+
+      font-size: 45px;
+
+      color: var(--maroon);
+    }
+
+    .count-label {
+      font-size: 9px;
+
+      letter-spacing: 3px;
+
+      text-transform: uppercase;
+
+      color: var(--gold-dark);
+    }
+
+    /* Venue */
+
+    .venue-section {
+      max-width: 900px;
+      margin: 80px auto 50px;
+
+      text-align: center;
+    }
+
+    .venue-section h3 {
+      font-family: "Cormorant Garamond", serif;
+
+      font-size: 50px;
+
+      color: var(--maroon);
+
+      margin-bottom: 10px;
+    }
+
+    .venue-section p {
+      color: #735a45;
+      margin-bottom: 25px;
+    }
+
+    .venue-map {
+      height: 260px;
+
+      border: 1px solid var(--gold);
+
+      background:
+        linear-gradient(
+          rgba(100,50,30,0.08),
+          rgba(100,50,30,0.08)
+        ),
+        #eadbc5;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      position: relative;
+
+      overflow: hidden;
+    }
+
+    .map-decoration {
+      font-family: "Cormorant Garamond", serif;
+
+      font-size: 35px;
+
+      color: rgba(100,50,30,0.4);
+    }
+
+    /* Footer */
+
+    footer {
+      text-align: center;
+
+      padding: 70px 20px 90px;
+
+      background: var(--maroon);
+
+      color: var(--ivory);
+    }
+
+    footer .script {
+      font-size: 55px;
+      color: var(--gold-light);
+    }
+
+    footer p {
+      margin-top: 15px;
+
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+
+      opacity: 0.75;
+    }
+
+    .footer-ornament {
+      margin: 25px 0;
+
+      color: var(--gold-light);
+
+      font-size: 22px;
+      letter-spacing: 10px;
+    }
+
+    /* =========================================================
+       8. MOBILE
+    ========================================================== */
+
+    @media (max-width: 768px) {
+
+      .navbar {
+        padding: 15px 5%;
+      }
+
+      .logo {
+        font-size: 27px;
+      }
+
+      .nav-links {
+        position: absolute;
+
+        top: 100%;
+        left: 0;
+
+        width: 100%;
+
+        display: none;
+        flex-direction: column;
+
+        gap: 0;
+
+        background: rgba(255,250,240,0.97);
+
+        border-bottom: 1px solid rgba(200,155,75,0.3);
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links li {
+        text-align: center;
+        padding: 18px;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .hero-couple {
+        gap: 10px;
+      }
+
+      .hero-photo {
+        width: 43vw;
+        height: 270px;
+      }
+
+      .hero-names {
+        font-size: 67px;
+      }
+
+      .hero-intro {
+        font-size: 20px;
+      }
+
+      .getting-married {
+        font-size: 9px;
+        letter-spacing: 4px;
+      }
+
+      .timeline::before {
+        left: 15px;
+      }
+
+      .story-item,
+      .story-item:nth-child(even),
+      .story-item:nth-child(odd) {
+        width: 100%;
+
+        margin-left: 0;
+
+        padding:
+          35px 10px 35px 50px;
+
+        text-align: left;
+      }
+
+      .story-item:nth-child(odd) .timeline-dot,
+      .story-item:nth-child(even) .timeline-dot {
+        left: 9px;
+        right: auto;
+      }
+
+      .story-image {
+        height: 300px;
+      }
+
+      .details-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .countdown {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .count-number {
+        font-size: 38px;
+      }
+
+      .flower {
+        font-size: 45px;
+      }
+    }
+
+    /* =========================================================
+       9. REDUCED MOTION
+    ========================================================== */
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+
+
+<body>
+
+  <!-- =========================================================
+       NAVIGATION
+  ========================================================== -->
+
+  <header class="navbar">
+
+    <a href="#home" class="logo">
+      A & P
+    </a>
+
+    <button
+      class="menu-btn"
+      id="menuBtn"
+      aria-label="Open navigation">
+      ☰
+    </button>
+
+    <ul class="nav-links" id="navLinks">
+
+      <li>
+        <a href="#home" class="nav-link active">
+          Home
+        </a>
+      </li>
+
+      <li>
+        <a href="#story" class="nav-link">
+          Our Story
+        </a>
+      </li>
+
+      <li>
+        <a href="#wedding" class="nav-link">
+          Wedding
+        </a>
+      </li>
+
+    </ul>
+
+  </header>
+
+
+  <!-- =========================================================
+       PAGE 1 — HOME
+  ========================================================== -->
+
+  <section id="home">
+
+    <div class="gold-particles">
+      <span class="particle"></span>
+      <span class="particle"></span>
+      <span class="particle"></span>
+      <span class="particle"></span>
+      <span class="particle"></span>
+    </div>
+
+    <div class="flower one">❀</div>
+    <div class="flower two">✿</div>
+    <div class="flower three">❁</div>
+
+
+    <div class="section-inner hero-content">
+
+      <p class="hero-intro reveal">
+        Together with their families
+      </p>
+
+      <h1 class="hero-names reveal">
+        Anushka
+
+        <span class="hero-amp">
+          &amp;
+        </span>
+
+        Prabhas
+      </h1>
+
+      <p class="getting-married reveal">
+        Are Getting Married
+      </p>
+
+
+      <!-- Couple photographs -->
+
+      <div class="hero-couple">
+
+        <div class="hero-photo">
+          <img
+            src="https://assets.thehansindia.com/h-upload/2021/11/07/1120720-anushkaa.jpg"
+            alt="Bride - Anushka Shetty"
+          />
+        </div>
+
+        <div class="hero-photo">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQG8rjh6_M6EmhWZdTSq2P1VLlCRMWoqwpLMlWMomPUtQ&s=10"
+            alt="Groom - Prabhas Raju"
+          />
+        </div>
+
+      </div>
+
+
+      <div class="hero-date">
+
+        <strong>11 • 10</strong>
+
+        <span></span>
+
+        <strong>7:30 PM</strong>
+
+      </div>
+
+
+      <p class="venue-small">
+        SRE Conventions &amp; Bhimavaram
+      </p>
+
+
+      <a
+        href="#story"
+        class="gold-btn">
+        Enter Invitation
+      </a>
+
+
+      <div class="scroll-hint">
+        ↓ &nbsp; Scroll to discover
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================================================
+       PAGE 2 — OUR STORY
+  ========================================================== -->
+
+  <section id="story">
+
+    <div class="flower one">❀</div>
+    <div class="flower two">✿</div>
+
+
+    <div class="section-inner">
+
+      <div class="story-header">
+
+        <p class="eyebrow">
+          Our Journey
+        </p>
+
+        <h2 class="section-title">
+          Our Story
+        </h2>
+
+        <p class="story-subtitle">
+          Two hearts, one beautiful beginning
+        </p>
+
+        <div class="ornament">
+          ✦ ❧ ✦
+        </div>
+
+      </div>
+
+
+      <!-- Timeline -->
+
+      <div class="timeline">
+
+
+        <article class="story-item reveal-story">
+
+          <span class="timeline-dot"></span>
+
+          <h3>
+            The Beginning
+          </h3>
+
+          <!-- EDITABLE STORY TEXT -->
+          <p>
+            Every beautiful story begins with a moment.
+            This space is reserved for the story of how
+            two hearts found their way toward one another.
+          </p>
+
+        </article>
+
+
+        <article class="story-item reveal-story">
+
+          <span class="timeline-dot"></span>
+
+          <h3>
+            The Journey
+          </h3>
+
+          <!-- EDITABLE STORY TEXT -->
+          <p>
+            Through laughter, memories and countless
+            beautiful moments, their journey continued,
+            creating memories that will be cherished forever.
+          </p>
+
+        </article>
+
+
+        <article class="story-item reveal-story">
+
+          <span class="timeline-dot"></span>
+
+          <h3>
+            The Promise
+          </h3>
+
+          <!-- EDITABLE STORY TEXT -->
+          <p>
+            And now begins a beautiful new chapter —
+            a promise to walk together through every
+            season of life, surrounded by love and family.
+          </p>
+
+        </article>
+
+      </div>
+
+
+      <!-- Large couple photograph -->
+
+      <div class="story-image reveal-story">
+
+        <img
+          src="https://assets.thehansindia.com/h-upload/2021/11/07/1120720-anushkaa.jpg"
+          alt="Wedding couple"
+        />
+
+      </div>
+
+
+      <div class="continue">
+
+        <a
+          href="#wedding"
+          class="gold-btn">
+
+          Continue to Wedding Details ↓
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================================================
+       PAGE 3 — WEDDING DETAILS
+  ========================================================== -->
+
+  <section id="wedding">
+
+    <div class="gold-particles">
+      <span class="particle"></span>
+      <span class="particle"></span>
+      <span class="particle"></span>
+      <span class="particle"></span>
+    </div>
+
+
+    <div class="flower one">❀</div>
+    <div class="flower two">✿</div>
+
+
+    <div class="section-inner">
+
+      <div class="wedding-header">
+
+        <p class="eyebrow">
+          Save The Date
+        </p>
+
+        <h2 class="section-title">
+          The Wedding
+        </h2>
+
+        <div class="ornament">
+          ✦ ❧ ✦
+        </div>
+
+      </div>
+
+
+      <!-- Wedding detail cards -->
+
+      <div class="details-grid">
+
+
+        <div class="detail-card">
+
+          <div class="detail-icon">
+            ♡
+          </div>
+
+          <h3>
+            Date
+          </h3>
+
+          <p>
+            11-10
+          </p>
+
+        </div>
+
+
+        <div class="detail-card">
+
+          <div class="detail-icon">
+            ◷
+          </div>
+
+          <h3>
+            Time
+          </h3>
+
+          <p>
+            7:30 PM
+          </p>
+
+        </div>
+
+
+        <div class="detail-card">
+
+          <div class="detail-icon">
+            ✦
+          </div>
+
+          <h3>
+            Venue
+          </h3>
+
+          <p>
+            SRE Conventions
+            <br>
+            &amp; Bhimavaram
+          </p>
+
+        </div>
+
+
+      </div>
+
+
+      <!-- Invitation message -->
+
+      <div class="invitation-message">
+
+        <p>
+          Join us as we celebrate love,
+          family and a beautiful new beginning.
+        </p>
+
+      </div>
+
+
+      <!-- =====================================================
+           COUNTDOWN
+
+           CHANGE THE DATE BELOW IN JAVASCRIPT.
+      ====================================================== -->
+
+      <div class="countdown">
+
+
+        <div class="count-box">
+
+          <div
+            class="count-number"
+            id="days">
+            00
+          </div>
+
+          <div class="count-label">
+            Days
+          </div>
+
+        </div>
+
+
+        <div class="count-box">
+
+          <div
+            class="count-number"
+            id="hours">
+            00
+          </div>
+
+          <div class="count-label">
+            Hours
+          </div>
+
+        </div>
+
+
+        <div class="count-box">
+
+          <div
+            class="count-number"
+            id="minutes">
+            00
+          </div>
+
+          <div class="count-label">
+            Minutes
+          </div>
+
+        </div>
+
+
+        <div class="count-box">
+
+          <div
+            class="count-number"
+            id="seconds">
+            00
+          </div>
+
+          <div class="count-label">
+            Seconds
+          </div>
+
+        </div>
+
+
+      </div>
+
+
+      <!-- Venue -->
+
+      <div class="venue-section">
+
+        <h3>
+          SRE Conventions
+        </h3>
+
+        <p>
+          Bhimavaram
+        </p>
+
+
+        <div class="venue-map">
+
+          <div class="map-decoration">
+            SRE Conventions &amp; Bhimavaram
+          </div>
+
+        </div>
+
+
+        <a
+          class="gold-btn"
+          target="_blank"
+          rel="noopener"
+          href="https://www.google.com/maps/search/?api=1&query=SRE+Conventions+Bhimavaram">
+
+          Get Directions
+
+        </a>
+
+      </div>
+
+
+      <!-- RSVP -->
+
+      <div style="text-align:center; margin-top:45px;">
+
+        <!-- CHANGE RSVP LINK HERE -->
+
+        <a
+          href="mailto:your-email@example.com?subject=Wedding%20RSVP"
+          class="gold-btn">
+
+          RSVP
+
+        </a>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================================================
+       FOOTER
+  ========================================================== -->
+
+  <footer>
+
+    <div class="footer-ornament">
+      ✦ ❧ ✦
+    </div>
+
+    <div class="script">
+      Anushka &amp; Prabhas
+    </div>
+
+    <p>
+      With love and blessings
+    </p>
+
+  </footer>
+
+
+
+  <!-- =========================================================
+       JAVASCRIPT
+  ========================================================== -->
+
+  <script>
+
+    /* =========================================================
+       EDITABLE SETTINGS
+    ========================================================== */
+
+    /*
+      CHANGE THE COUNTDOWN DATE HERE.
+
+      Example:
+      "2027-10-11T19:30:00"
+
+      Use:
+      YYYY-MM-DDTHH:MM:SS
+    */
+
+    const weddingDate =
+      new Date("2027-10-11T19:30:00").getTime();
+
+
+    /*
+      RSVP:
+      Change the email address in the RSVP
+      link above.
+    */
+
+
+    /* =========================================================
+       MOBILE MENU
+    ========================================================== */
+
+    const menuBtn =
+      document.getElementById("menuBtn");
+
+    const navLinks =
+      document.getElementById("navLinks");
+
+    menuBtn.addEventListener("click", () => {
+
+      navLinks.classList.toggle("open");
+
+    });
+
+
+    /* Close mobile menu */
+
+    document
+      .querySelectorAll(".nav-link")
+      .forEach(link => {
+
+        link.addEventListener("click", () => {
+
+          navLinks.classList.remove("open");
+
+        });
+
+      });
+
+
+    /* =========================================================
+       COUNTDOWN TIMER
+    ========================================================== */
+
+    function updateCountdown() {
+
+      const now =
+        new Date().getTime();
+
+      const difference =
+        weddingDate - now;
+
+
+      if (difference <= 0) {
+
+        document.getElementById("days").textContent = "00";
+        document.getElementById("hours").textContent = "00";
+        document.getElementById("minutes").textContent = "00";
+        document.getElementById("seconds").textContent = "00";
+
+        return;
+
+      }
+
+
+      const days =
+        Math.floor(
+          difference / (1000 * 60 * 60 * 24)
+        );
+
+      const hours =
+        Math.floor(
+          (difference / (1000 * 60 * 60)) % 24
+        );
+
+      const minutes =
+        Math.floor(
+          (difference / (1000 * 60)) % 60
+        );
+
+      const seconds =
+        Math.floor(
+          (difference / 1000) % 60
+        );
+
+
+      document.getElementById("days")
+        .textContent =
+        String(days).padStart(2, "0");
+
+      document.getElementById("hours")
+        .textContent =
+        String(hours).padStart(2, "0");
+
+      document.getElementById("minutes")
+        .textContent =
+        String(minutes).padStart(2, "0");
+
+      document.getElementById("seconds")
+        .textContent =
+        String(seconds).padStart(2, "0");
+
+    }
+
+
+    updateCountdown();
+
+    setInterval(updateCountdown, 1000);
+
+
+    /* =========================================================
+       SCROLL REVEAL
+    ========================================================== */
+
+    const revealElements =
+      document.querySelectorAll(".reveal-story");
+
+
+    const revealObserver =
+      new IntersectionObserver(
+        (entries) => {
+
+          entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+              entry.target.classList.add("visible");
+
+            }
+
+          });
+
+        },
+        {
+          threshold: 0.15
+        }
+      );
+
+
+    revealElements.forEach(element => {
+
+      revealObserver.observe(element);
+
+    });
+
+
+    /* =========================================================
+       ACTIVE NAVIGATION
+    ========================================================== */
+
+    const sections =
+      document.querySelectorAll("section");
+
+    const navigationLinks =
+      document.querySelectorAll(".nav-link");
+
+
+    const navObserver =
+      new IntersectionObserver(
+        entries => {
+
+          entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+              navigationLinks
+                .forEach(link =>
+                  link.classList.remove("active")
+                );
+
+
+              const activeLink =
+                document.querySelector(
+                  `.nav-link[href="#${entry.target.id}"]`
+                );
+
+
+              if (activeLink) {
+                activeLink.classList.add("active");
+              }
+
+            }
+
+          });
+
+        },
+        {
+          threshold: 0.5
+        }
+      );
+
+
+    sections.forEach(section => {
+
+      navObserver.observe(section);
+
+    });
+
+
+    /* =========================================================
+       SUBTLE PARALLAX
+    ========================================================== */
+
+    const heroPhotos =
+      document.querySelectorAll(".hero-photo");
+
+
+    window.addEventListener("scroll", () => {
+
+      const scroll =
+        window.scrollY;
+
+      if (window.innerWidth > 768) {
+
+        heroPhotos.forEach((photo, index) => {
+
+          const direction =
+            index === 0 ? -1 : 1;
+
+          photo.style.translate =
+            `0 ${scroll * direction * 0.025}px`;
+
+        });
+
+      }
+
+    });
+
+
+  </script>
+
+</body>
+</html>
